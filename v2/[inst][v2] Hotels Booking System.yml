@@ -194,17 +194,18 @@ components:
           "page": 1,
           "pageSize": 1,
           "totalElements": 1,
-          "items": [
-            {
-              "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
-              "name": "Ararat Park Hyatt Moscow",
-              "country": "Россия",
-              "city": "Москва",
-              "address": "Неглинная ул., 4",
-              "stars": 5,
-              "price": 10000
-            }
-          ]
+          "items":
+            [
+              {
+                "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
+                "name": "Ararat Park Hyatt Moscow",
+                "country": "Россия",
+                "city": "Москва",
+                "address": "Неглинная ул., 4",
+                "stars": 5,
+                "price": 10000,
+              },
+            ],
         }
       properties:
         page:
@@ -231,7 +232,7 @@ components:
           "city": "Москва",
           "address": "Неглинная ул., 4",
           "stars": 5,
-          "price": 10000
+          "price": 10000,
         }
       properties:
         hotelUid:
@@ -264,7 +265,7 @@ components:
           "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
           "name": "Ararat Park Hyatt Moscow",
           "fullAddress": "Россия, Москва, Неглинная ул., 4",
-          "stars": 5
+          "stars": 5,
         }
       properties:
         hotelUid:
@@ -285,28 +286,24 @@ components:
       type: object
       example:
         {
-          "reservations": [
-            {
-              "reservationUid": "9b4ba1f7-e5ac-465b-ace4-7b54dec20f9a",
-              "hotel": {
-                "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
-                "name": "Ararat Park Hyatt Moscow",
-                "fullAddress": "Россия, Москва, Неглинная ул., 4",
-                "stars": 5
-              },
-              "startDate": "2021-10-08",
-              "endDate": "2021-10-11",
-              "status": "PAID",
-              "payment": {
+          "reservations":
+            [
+              {
+                "reservationUid": "9b4ba1f7-e5ac-465b-ace4-7b54dec20f9a",
+                "hotel":
+                  {
+                    "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
+                    "name": "Ararat Park Hyatt Moscow",
+                    "fullAddress": "Россия, Москва, Неглинная ул., 4",
+                    "stars": 5,
+                  },
+                "startDate": "2021-10-08",
+                "endDate": "2021-10-11",
                 "status": "PAID",
-                "price": 27000
-              }
-            }
-          ],
-          "loyalty": {
-            "status": "GOLD",
-            "discount": 10
-          }
+                "payment": { "status": "PAID", "price": 27000 },
+              },
+            ],
+          "loyalty": { "status": "GOLD", "discount": 10 },
         }
       properties:
         reservations:
@@ -321,19 +318,17 @@ components:
       example:
         {
           "reservationUid": "9b4ba1f7-e5ac-465b-ace4-7b54dec20f9a",
-          "hotel": {
-            "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
-            "name": "Ararat Park Hyatt Moscow",
-            "fullAddress": "Россия, Москва, Неглинная ул., 4",
-            "stars": 5
-          },
+          "hotel":
+            {
+              "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
+              "name": "Ararat Park Hyatt Moscow",
+              "fullAddress": "Россия, Москва, Неглинная ул., 4",
+              "stars": 5,
+            },
           "startDate": "2021-10-08",
           "endDate": "2021-10-11",
           "status": "PAID",
-          "payment": {
-            "status": "PAID",
-            "price": 27000
-          }
+          "payment": { "status": "PAID", "price": 27000 },
         }
       properties:
         reservationUid:
@@ -366,7 +361,7 @@ components:
         {
           "hotelUid": "049161bb-badd-4fa8-9d90-87c9a82b0668",
           "startDate": "2021-10-08",
-          "endDate": "2021-10-11"
+          "endDate": "2021-10-11",
         }
       properties:
         hotelUid:
@@ -392,10 +387,7 @@ components:
           "endDate": "2021-10-11",
           "discount": 10,
           "status": "PAID",
-          "payment": {
-            "status": "PAID",
-            "price": 27000
-          }
+          "payment": { "status": "PAID", "price": 27000 },
         }
       properties:
         reservationUid:
@@ -429,11 +421,7 @@ components:
 
     PaymentInfo:
       type: object
-      example:
-        {
-          "status": "PAID",
-          "price": 27000
-        }
+      example: { "status": "PAID", "price": 27000 }
       properties:
         status:
           type: string
@@ -448,12 +436,7 @@ components:
 
     LoyaltyInfoResponse:
       type: object
-      example:
-        {
-          "status": "GOLD",
-          "discount": 10,
-          "reservationCount": 25
-        }
+      example: { "status": "GOLD", "discount": 10, "reservationCount": 25 }
       properties:
         status:
           type: string
