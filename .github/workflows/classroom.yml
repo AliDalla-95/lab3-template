@@ -37,8 +37,8 @@ jobs:
         timeout-minutes: 5
         run: ./scripts/test-script.sh
         env:
-          VARIANT: v2
-          SERVICE_NAME: loyalty
+          VARIANT: "v2"
+          SERVICE_NAME: "loyalty"
           PORT_NUMBER: 8050
 
       - uses: education/autograding@v1
